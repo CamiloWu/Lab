@@ -28,10 +28,10 @@ jobs:
         run: docker push ${{ secrets.DOCKER_USERNAME }}/mi-app:1.0.0
       - name: Update Kubernetes manifests
         run: |
-          sed -i 's|image: .*|image: ${{ secrets.DOCKER_USERNAME }}/mi-app:${{ github.sha }}|' k8/deployment.yaml
+          sed -i 's|image: .*|image: ${{ secrets.DOCKER_USERNAME }}/mi-app:1.0.0|' k8/deployment.yaml
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git commit -am "Updated image to ${{ github.sha }}"
+          git commit -am "Updated image to 1.0.0"
           git push origin main
 
       - name: Push changes to GitHub
