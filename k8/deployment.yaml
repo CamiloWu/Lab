@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: ${{ secrets.DOCKER_USERNAME }}/mi-app:latest
+        image: camilowu/mi-app:3984dace0a8811b4194494c79d64c9ba857184a3
         ports:
         - containerPort: 80
