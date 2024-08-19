@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: camilowu/mi-app:e0b05c0c225f99df9b722c8845cb3ee5794d6948
+        image: camilowu/mi-app:15c9a1b2f8f0afeebe365fbc42d77dcae427b397
         ports:
         - containerPort: 80
